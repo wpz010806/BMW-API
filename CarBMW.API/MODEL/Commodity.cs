@@ -11,8 +11,7 @@ namespace CarBMW.API.MODEL
     public class Commodity
     {
         [Key]
-        public int Cmid { get; set; }
-        public int Stock { get; set; }
+        public int Cid { get; set; }
         public string CommName { get; set; }
     }
 }

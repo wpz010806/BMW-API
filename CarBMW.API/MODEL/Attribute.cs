@@ -11,9 +11,9 @@ namespace CarBMW.API.MODEL
     public class Attribute
     {
         [Key]
-        public int Caid { get; set; }
+        public int AId { get; set; }
         public int Commodityid { get; set; }
-        public int Atid { get; set; }
-        public string PropertyName { get; set; }
+        public string AName { get; set; }
+        public int PropertyId { get; set; }
     }
 }
