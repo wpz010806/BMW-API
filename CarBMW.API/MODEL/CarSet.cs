@@ -10,7 +10,7 @@ namespace CarBMW.API.MODEL
     [Table("CarSet")]
     public class CarSet
     {
-        [Key]
+        [Key]//12345
         public int Cid { get; set; }
         public string Series { get; set; }
     }
