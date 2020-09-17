@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace CarBMW.API.MODEL
 {
-    [Table("InWarehouesInfo")]
-    public class InWarehouesInfo
+    [Table("OutWarehouesInfo")]
+    public class OutWarehouesInfo
     {
         [Key]
-        public int IWd { get; set; }
-        public int IWNum { get; set; }
+        public int OWId { get; set; }
+        public string OWNum { get; set; }
         public int WTId { get; set; }
         public int CarMessageid { get; set; }
         public int CarSetid { get; set; }
-        public int IWCount { get; set; }
-        public DateTime IWTime { get; set; }
-        public int IWState { get; set; }
+        public int OWCount { get; set; }
+        public DateTime OWTime { get; set; }
+        public int OWState { get; set; }
     }
 }

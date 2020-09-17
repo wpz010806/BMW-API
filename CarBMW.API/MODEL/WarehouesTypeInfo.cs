@@ -11,9 +11,9 @@ namespace CarBMW.API.MODEL
     public class WarehouesTypeInfo
     {
         [Key]
-        public int WTid { get; set; }
+        public int WTId { get; set; }
         public string WTName { get; set; }
-        public int Wtcapacity { get; set; }
-        public int WTSale { get; set; }
+        public int WTCup { get; set; }
+        public int WTState { get; set; }
     }
 }

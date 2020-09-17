@@ -8,7 +8,7 @@ namespace CarBMW.API.MODEL
         public Dbcontext() { }
         public Dbcontext(DbContextOptions<Dbcontext> options) : base(options) { }
 
-        public DbSet<AllotInfo> AllotInfo { get; set; }
+        public DbSet<AllotWarehouesInfo> AllotWarehouesInfo { get; set; }
         public DbSet<Attendance> Attendance { get; set; }
         public DbSet<Attribute> Attribute { get; set; }
         public DbSet<CarMessage> CarMessage { get; set; }
@@ -24,7 +24,7 @@ namespace CarBMW.API.MODEL
         public DbSet<InWarehouesInfo> InWarehouesInfo { get; set; }
         public DbSet<MenuInfo> MenuInfo { get; set; }
         public DbSet<MyshoppingCar> MyshoppingCar { get; set; }
-        public DbSet<OutWareInfo> OutWareInfo { get; set; }
+        public DbSet<OutWarehouesInfo> OutWarehouesInfo { get; set; }
         public DbSet<Property> Property { get; set; }
         public DbSet<Provinces> Provinces { get; set; }
         public DbSet<PurchaseDate> PurchaseDate { get; set; }

@@ -11,11 +11,11 @@ namespace CarBMW.API.MODEL
     public class WarehouesDetailInfo
     {
         [Key]
-        public int Wdid { get; set; }
-        public int WarehouseTypeInfoid { get; set; }
+        public int WDId { get; set; }
+        public int WTId { get; set; }
         public int CarMessageid { get; set; }
         public int CarSetid { get; set; }
-        public int WDnum { get; set; }
-        public int WDSale { get; set; }
+        public int WDCount { get; set; }
+        public int WDState { get; set; }
     }
 }
