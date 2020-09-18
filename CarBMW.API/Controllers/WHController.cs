@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CarBMW.API.MODEL;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Logging;
 
 namespace CarBMW.API.Controllers
@@ -17,11 +18,13 @@ namespace CarBMW.API.Controllers
 
         public WHController(Dbcontext db) { this.db = db; }
         //日志使用
-        LogHelper log = new LogHelper();
+        //LogHelper log = new LogHelper();
 
-        public IActionResult Index()
+        [HttpGet]
+        [Route("api/GetWT")]
+        public async Task<ActionResult<IEnumerable<WarehouesTypeInfo>>> GetWT()
         {
-            return View();
+            return await db.WarehouesTypeInfo.ToArrayAsync();
         }
     }
 }
