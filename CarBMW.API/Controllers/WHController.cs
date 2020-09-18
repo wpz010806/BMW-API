@@ -10,7 +10,7 @@ using Microsoft.IdentityModel.Logging;
 
 namespace CarBMW.API.Controllers
 {
-    [EnableCors("cors")]
+    [EnableCors("cors")] //设置跨域处理的代理
     [ApiController]
     public class WHController : Controller
     {

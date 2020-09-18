@@ -26,15 +26,14 @@ namespace CarBMW.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Dbcontext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<Dbcontext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //配置跨域处理
             services.AddCors(options =>
             {
                 options.AddPolicy("cors", builder =>
                 {
-                    builder.WithOrigins("http://localhost:59140", "")//允许指定域名访问
+                    builder.WithOrigins("http://localhost:59140")//允许指定域名访问
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials();//指定处理cookie
@@ -52,11 +51,13 @@ namespace CarBMW.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors("cors");
+            
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("cors");
 
             app.UseEndpoints(endpoints =>
             {
