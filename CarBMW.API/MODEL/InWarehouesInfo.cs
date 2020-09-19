@@ -13,7 +13,7 @@ namespace CarBMW.API.MODEL
         [Key]
         public int IWd { get; set; }
         public int IWNum { get; set; }
-        public int WTId { get; set; }
+        public int WDId { get; set; }
         public int CarMessageid { get; set; }
         public int CarSetid { get; set; }
         public int IWCount { get; set; }

@@ -26,5 +26,29 @@ namespace CarBMW.API.Controllers
         {
             return await db.WarehouesTypeInfo.ToArrayAsync();
         }
+
+        [HttpGet]
+        [Route("api/GetWD")]
+        public async Task<ActionResult<IEnumerable<WDandWTView>>> GetWD()
+        {
+            var Linq = from wd in db.WarehouesDetailInfo
+                       join wt in db.WarehouesTypeInfo
+                       on wd.WTId equals wt.WTId
+                       select new WDandWTView()
+                       {
+                           WDId = wd.WDId,
+                           WDName=wd.WDName,
+                           WDCount=wd.WDCount,
+                           WDState=wd.WDState,
+                           CarMessageId=wd.CarMessageId,
+                           WTId=wt.WTId,
+                           WTName=wt.WTName,
+                           WTCup=wt.WTCup,
+                           WTState=wt.WTState
+                       };
+            return await Linq.ToListAsync();
+        }
+
+
     }
 }

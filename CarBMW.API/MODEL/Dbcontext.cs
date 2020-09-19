@@ -39,5 +39,6 @@ namespace CarBMW.API.MODEL
         public DbSet<Wage> Wage { get; set; }
         public DbSet<WarehouesDetailInfo> WarehouesDetailInfo { get; set; }
         public DbSet<WarehouesTypeInfo> WarehouesTypeInfo { get; set; }
+        public DbSet<WDandWTView> WDandWTView { get; set; }
     }
 }
