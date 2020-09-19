@@ -40,5 +40,6 @@ namespace CarBMW.API.MODEL
         public DbSet<WarehouesDetailInfo> WarehouesDetailInfo { get; set; }
         public DbSet<WarehouesTypeInfo> WarehouesTypeInfo { get; set; }
         public DbSet<WDandWTView> WDandWTView { get; set; }
+        public DbSet<Reserve> Reserve { get; set; }
     }
 }
