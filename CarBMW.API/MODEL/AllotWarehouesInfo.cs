@@ -16,7 +16,7 @@ namespace CarBMW.API.MODEL
         public int OutWDId { get; set; }
         public int InWDId { get; set; }
         public int AWCount { get; set; }
-        public DateTime AWDate { get; set; }
+        public string AWDate { get; set; }
         public int AWState { get; set; }
     }
 }

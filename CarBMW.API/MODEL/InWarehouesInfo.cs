@@ -17,7 +17,7 @@ namespace CarBMW.API.MODEL
         public int CarMessageid { get; set; }
         public int CarSetid { get; set; }
         public int IWCount { get; set; }
-        public DateTime IWTime { get; set; }
+        public string IWTime { get; set; }
         public int IWState { get; set; }
     }
 }
