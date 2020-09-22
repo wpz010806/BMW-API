@@ -16,6 +16,6 @@ namespace CarBMW.API.MODEL
         public string COlour { get; set; }
         public int Clientid { get; set; }
         public int Price { get; set; }
-        public int CWarehouseTypeid { get; set; }
+        public int WDId { get; set; }
     }
 }
